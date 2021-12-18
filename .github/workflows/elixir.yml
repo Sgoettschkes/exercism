@@ -13,15 +13,15 @@ jobs:
   test:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - name: "Checkout code"
+        uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - uses: erlef/setup-beam@v1
+      - name: "Setup BEAM"
+        uses: erlef/setup-beam@v1
         with:
           otp-version: ${{ env.erlang-version }}
           elixir-version: ${{ env.elixir-version }}
-      - run: |
-            cd elixir/hello-world
-            export MIX_ENV=test
-            mix deps.get
-            mix test
+      - name: "Run tests"
+        run: bash elixir-tests.sh
+        shell: bash
