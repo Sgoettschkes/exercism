@@ -1,2 +1,11 @@
-/haskell/*/.stack-work
+# Exercism
 /*/*/.exercism
+
+# Elixir
+/elixir/*/deps
+
+# Haskell
+/haskell/*/.stack-work
+
+# Javascript
+/javascript/*/node_modules
