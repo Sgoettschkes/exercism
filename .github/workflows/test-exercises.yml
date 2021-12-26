@@ -1,4 +1,4 @@
-name: Test elixir exercises
+name: Test exercises
 on:
   push:
     branches: [develop,main]
@@ -8,9 +8,11 @@ on:
 env:
   elixir-version: '1.13.1'
   erlang-version: '24.2.0'
+  ghc-version: '8.10.7'
+  stack-version: '2.7.3'
 
 jobs:
-  test:
+  test-elixir:
     runs-on: ubuntu-20.04
     steps:
       - name: "Checkout code"
@@ -24,4 +26,20 @@ jobs:
           elixir-version: ${{ env.elixir-version }}
       - name: "Run tests"
         run: bash elixir-tests.sh
+        shell: bash
+  test-haskell:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: "Checkout code"
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: "Setup GHC"
+        uses: haskell/actions/setup@v1
+        with:
+          ghc-version: ${{ env.ghc-version }}
+          enable-stack: true
+          stack-version: ${{ env.stack-version }}
+      - name: "Run tests"
+        run: bash haskell-tests.sh
         shell: bash
