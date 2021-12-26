@@ -9,6 +9,7 @@ env:
   elixir-version: '1.13.1'
   erlang-version: '24.2.0'
   ghc-version: '8.10.7'
+  node-version: '17.3.0'
   stack-version: '2.7.3'
 
 jobs:
@@ -42,4 +43,18 @@ jobs:
           stack-version: ${{ env.stack-version }}
       - name: "Run tests"
         run: bash haskell-tests.sh
+        shell: bash
+  test-javascript:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: "Checkout code"
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: "Setup GHC"
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.node-version }}
+      - name: "Run tests"
+        run: bash javascript-tests.sh
         shell: bash
