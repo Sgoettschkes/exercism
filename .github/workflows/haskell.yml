@@ -1,0 +1,28 @@
+name: Test haskell exercises
+on:
+  push:
+    branches: [develop,main]
+  pull_request:
+    branches: [develop,main]
+
+env:
+  ghc-version: '8.10.7'
+  stack-version: '2.7.3'
+
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: "Checkout code"
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: "Setup GHC"
+        uses: haskell/actions/setup@v1
+        with:
+          ghc-version: ${{ env.ghc-version }}
+          enable-stack: true
+          stack-version: ${{ env.stack-version }}
+      - name: "Run tests"
+        run: bash haskell-tests.sh
+        shell: bash
