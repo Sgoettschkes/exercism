@@ -2,6 +2,8 @@
 /*/*/.exercism
 
 # Elixir
+/.elixir_ls/
+/elixir/*/_build
 /elixir/*/deps
 
 # Haskell
@@ -9,3 +11,6 @@
 
 # Javascript
 /javascript/*/node_modules
+
+# VScode
+/.vscode/
