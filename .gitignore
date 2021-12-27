@@ -1,3 +1,7 @@
+# Dart
+/dart/*/.dart_tool
+/dart/*/.packages
+
 # Exercism
 /*/*/.exercism
 
