@@ -41,6 +41,7 @@ jobs:
         with:
           files: |
             ^elixir/
+          since_last_remote_commit: 'true'
       - name: "Setup BEAM"
         uses: erlef/setup-beam@v1
         if: steps.changed-files.outputs.any_changed == 'true'
