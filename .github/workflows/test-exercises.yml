@@ -34,13 +34,21 @@ jobs:
       - name: "Checkout code"
         uses: actions/checkout@v2
         with:
-          fetch-depth: 0
+          fetch-depth: 2
+      - name: Get specific changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v2.0.0
+        with:
+          files: |
+            ^elixir/
       - name: "Setup BEAM"
         uses: erlef/setup-beam@v1
+        if: steps.changed-files.outputs.any_changed == 'true'
         with:
           otp-version: ${{ env.erlang-version }}
           elixir-version: ${{ env.elixir-version }}
       - name: "Run tests"
+        if: steps.changed-files.outputs.any_changed == 'true'
         run: bash elixir-tests.sh
         shell: bash
   test-haskell:
