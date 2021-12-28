@@ -1,12 +1,12 @@
 defmodule BirdCount do
   def today([]), do: nil
-  def today([head | tail]), do: head
+  def today([head | _tail]), do: head
 
   def increment_day_count([]), do: [1]
-  def increment_day_count([head | tail]), do: [head + 1] ++ tail
+  def increment_day_count([head | tail]), do: [head + 1 | tail]
 
   def has_day_without_birds?([]), do: false
-  def has_day_without_birds?([0 | tail]), do: true
+  def has_day_without_birds?([0 | _tail]), do: true
   def has_day_without_birds?([_head | tail]), do: has_day_without_birds?(tail)
 
   def total([]), do: 0
