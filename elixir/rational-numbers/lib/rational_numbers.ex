@@ -38,14 +38,15 @@ defmodule RationalNumbers do
   Exponentiation of a rational number by an integer
   """
   @spec pow_rational(a :: rational, n :: integer) :: rational
-  def pow_rational({nom, denom}, n), do: {:math.pow(nom, Kernel.abs(n)), :math.pow(denom, Kernel.abs(n))}
+  def pow_rational({nom, denom}, n),
+    do: {:math.pow(nom, Kernel.abs(n)), :math.pow(denom, Kernel.abs(n))}
 
   @doc """
   Exponentiation of a real number by a rational number
   """
   @spec pow_real(x :: integer, n :: rational) :: float
   def pow_real(x, {nom, denom}) do
-    :math.pow(:math.pow(x, nom), 1/denom)
+    :math.pow(:math.pow(x, nom), 1 / denom)
   end
 
   @doc """
@@ -53,6 +54,7 @@ defmodule RationalNumbers do
   """
   @spec reduce(a :: rational) :: rational
   def reduce({a, b}) when b < 0, do: reduce({a * -1, b * -1})
+
   def reduce({a, b} = rational) do
     gcd = gcd(RationalNumbers.abs(rational))
     {trunc(a / gcd), trunc(b / gcd)}
@@ -61,6 +63,6 @@ defmodule RationalNumbers do
   defp gcd({a, 0}), do: a
   defp gcd({0, b}), do: b
   defp gcd({a, b}) when a == b, do: a
-  defp gcd({a, b}) when a > b, do: gcd({b, rem(a,b)})
-  defp gcd({a, b}) when a < b, do: gcd({a, rem(b,a)})
+  defp gcd({a, b}) when a > b, do: gcd({b, rem(a, b)})
+  defp gcd({a, b}) when a < b, do: gcd({a, rem(b, a)})
 end
