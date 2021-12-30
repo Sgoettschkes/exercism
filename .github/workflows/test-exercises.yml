@@ -27,6 +27,7 @@ jobs:
         with:
           files: |
             ^dart/
+            dart-tests.sh
           since_last_remote_commit: 'true'
       - name: "Setup Dart"
         uses: dart-lang/setup-dart@v1
@@ -50,6 +51,7 @@ jobs:
         with:
           files: |
             ^elixir/
+            elixir-tests.sh
           since_last_remote_commit: 'true'
       - name: "Setup BEAM"
         uses: erlef/setup-beam@v1
@@ -100,6 +102,7 @@ jobs:
         with:
           files: |
             ^javascript/
+            javascript-tests.sh
           since_last_remote_commit: 'true'
       - name: "Setup Node"
         uses: actions/setup-node@v2
