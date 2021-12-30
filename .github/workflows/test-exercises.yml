@@ -74,6 +74,7 @@ jobs:
         with:
           files: |
             ^haskell/
+            haskell-tests.sh
           since_last_remote_commit: 'true'
       - name: "Setup GHC"
         uses: haskell/actions/setup@v1
