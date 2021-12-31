@@ -2,12 +2,10 @@ module Prime (nth) where
 
 nth :: Int -> Maybe Integer
 nth 0 = Nothing 
-nth n = Just (primes 1 !! (n - 1))
+nth n = Just (primes !! (n - 1))
 
-primes :: Integer -> [Integer]
-primes num
-  | isPrime num = num : primes (num + 1)
-  | otherwise = primes (num + 1)
+primes :: [Integer]
+primes = filter isPrime [2..]
 
 isPrime :: Integer -> Bool 
 isPrime num
