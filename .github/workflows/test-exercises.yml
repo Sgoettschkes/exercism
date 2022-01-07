@@ -119,9 +119,8 @@ jobs:
       - name: "Install busted and build"
         run: |
           luarocks install busted
-          luarocks make
       - name: "Run tests"
-        run: busted -o utfTerminal
+        run: bash lua-tests.sh
         shell: bash
   test-javascript:
     runs-on: ubuntu-20.04
