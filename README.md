@@ -26,3 +26,9 @@ For linting, you'll also need hlint: `stack install hlint`. hlint is installed t
 ## Javascript
 
 Install node according to https://nodejs.org/en/download/. For macOS, use brew: `brew install node`
+
+# Lua
+
+Install lua and luarocks according to https://www.lua.org/download.html and https://github.com/luarocks/luarocks/wiki/Download. For macOS, use brew: `brew install lua luarocks`
+
+Install busted for testing and luacheck for linting, using luarocks: `luarocks install busted && luarocks install luacheck`
