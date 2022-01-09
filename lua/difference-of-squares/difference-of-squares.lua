@@ -1,5 +1,5 @@
 local function square_of_sum(n)
-  a = 0
+  local a = 0
   for i=1, n do
     a = a + i
   end
@@ -8,7 +8,7 @@ local function square_of_sum(n)
 end
 
 local function sum_of_squares(n)
-  a = 0
+  local a = 0
   for i=1, n do
     a = a + i^2
   end
