@@ -159,3 +159,13 @@ jobs:
         if: steps.changed-files.outputs.any_changed == 'true'
         run: bash lua-tests.sh
         shell: bash
+  test-rust:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: "Checkout code"
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: "Run tests"
+        run: bash rust-tests.sh
+        shell: bash
