@@ -1,9 +1,9 @@
 return function(s)
   s = string.gsub(s, "%W", "")
 
-  l = {}
+  local l = {}
   for i = 1, string.len(s)+1 do
-    c = string.sub(s, i, i):lower()
+    local c = string.sub(s, i, i):lower()
     if l[c] then
       return false
     end
