@@ -1,5 +1,4 @@
 defmodule ResistorColorTrio do
-
   @resistor_colors %{
     black: 0,
     brown: 1,
@@ -25,7 +24,7 @@ defmodule ResistorColorTrio do
     ohms = result * :math.pow(10, Map.get(@resistor_colors, Enum.at(colors, 2)))
 
     case ohms do
-      ohms when ohms > 999 -> {round(ohms/1000), :kiloohms}
+      ohms when ohms > 999 -> {round(ohms / 1000), :kiloohms}
       ohms -> {ohms, :ohms}
     end
   end
