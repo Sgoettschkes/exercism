@@ -27,7 +27,7 @@ defmodule TwoFerTest do
 
   test "when the parameter is a charlist" do
     assert_raise FunctionClauseError, fn ->
-      refute TwoFer.two_fer('Jon Snow')
+      refute TwoFer.two_fer(~c"Jon Snow")
     end
   end
 end
