@@ -15,7 +15,7 @@ Install dart according to https://dart.dev/get-dart. For macOS, use brew: `brew 
 
 ## Elixir
 
-Install elixir according to https://elixir-lang.org/install.html. For macOS, use brew: `brew install elixir`
+Using asdf, run `asdf install` in the root folder.
 
 ## Haskell
 
