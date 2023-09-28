@@ -32,8 +32,8 @@ defmodule LibraryFees do
   end
 
   def calculate_late_fee(checkout, return, rate) do
-    naive_checkout = NaiveDateTime.from_iso8601!(checkout)
-    naive_actual_return = NaiveDateTime.from_iso8601!(return)
+    naive_checkout = datetime_from_string(checkout)
+    naive_actual_return = datetime_from_string(return)
 
     rate =
       if(monday?(naive_actual_return)) do
@@ -42,8 +42,6 @@ defmodule LibraryFees do
         rate
       end
 
-    naive_checkout = NaiveDateTime.from_iso8601!(checkout)
-    naive_actual_return = NaiveDateTime.from_iso8601!(return)
     floor(days_late(return_date(naive_checkout), naive_actual_return) * rate)
   end
 end
