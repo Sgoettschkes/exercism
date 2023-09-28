@@ -29,7 +29,7 @@ defmodule PaintByNumber do
 
     case picture do
       <<>> -> nil
-      <<value::size(bit_size), rest::bitstring>> -> value
+      <<value::size(bit_size), _rest::bitstring>> -> value
     end
   end
 
@@ -38,7 +38,7 @@ defmodule PaintByNumber do
 
     case picture do
       <<>> -> ""
-      <<value::size(bit_size), rest::bitstring>> -> rest
+      <<_value::size(bit_size), rest::bitstring>> -> rest
     end
   end
 
