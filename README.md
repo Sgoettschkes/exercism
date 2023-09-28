@@ -23,7 +23,7 @@ Add the [erlang](https://github.com/asdf-vm/asdf-erlang) plugin: `asdf plugin ad
 
 Add the [elixir](https://github.com/asdf-vm/asdf-elixir) plugin: `asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git`
 
-
+Run `asdf install` in the root folder.
 
 ## Haskell
 
@@ -35,8 +35,14 @@ For linting, you'll also need hlint: `stack install hlint`. hlint is installed t
 
 Install node according to https://nodejs.org/en/download/. For macOS, use brew: `brew install node`
 
-# Lua
+## Lua
 
 Install lua and luarocks according to https://www.lua.org/download.html and https://github.com/luarocks/luarocks/wiki/Download. For macOS, use brew: `brew install lua luarocks`
 
 Install busted for testing and luacheck for linting, using luarocks: `luarocks install busted && luarocks install luacheck`
+
+## Rust
+
+Add the [rust](https://github.com/asdf-community/asdf-rust) plugin: `asdf plugin-add rust https://github.com/asdf-community/asdf-rust.git`
+
+Run `asdf install` in the root folder.
