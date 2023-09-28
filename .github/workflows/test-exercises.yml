@@ -7,7 +7,7 @@ on:
 
 env:
   dart-version: '2.15.1'
-  elixir-version: '1.14.6'
+  elixir-version: '1.15.6'
   erlang-version: '26.1'
   ghc-version: '8.10.7'
   lua-version: '5.4.3'
