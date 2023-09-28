@@ -9,13 +9,21 @@ Check out my [profile page](https://exercism.org/profiles/Sgoettschkes)!
 
 In order to solve exercism exercises, test the code and run the linter used for the particular language, make sure you follow the steps below.
 
+We'll be using `asdf` if not indicated otherwise.
+
 ## Dart
 
-Install dart according to https://dart.dev/get-dart. For macOS, use brew: `brew install dart`
+Add the [dart](https://github.com/PatOConnor43/asdf-dart) plugin: `asdf plugin-add dart https://github.com/patoconnor43/asdf-dart.git`
+
+Run `asdf install` in the root folder.
 
 ## Elixir
 
-Using asdf, run `asdf install` in the root folder.
+Add the [erlang](https://github.com/asdf-vm/asdf-erlang) plugin: `asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git`
+
+Add the [elixir](https://github.com/asdf-vm/asdf-elixir) plugin: `asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git`
+
+
 
 ## Haskell
 
