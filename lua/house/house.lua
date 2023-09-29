@@ -41,7 +41,7 @@ house.recite = function()
   for line = 2, 12 do
     verse = verse .. "\n" .. house.verse(line)
   end
-  
+
   return verse
 end
 
