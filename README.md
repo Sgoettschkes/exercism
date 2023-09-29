@@ -33,7 +33,9 @@ For linting, you'll also need hlint: `stack install hlint`. hlint is installed t
 
 ## Javascript
 
-Install node according to https://nodejs.org/en/download/. For macOS, use brew: `brew install node`
+Add the [nodejs]https://github.com/asdf-vm/asdf-nodejs) plugin: `asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git`
+
+Run `asdf install` in the root folder.
 
 ## Lua
 

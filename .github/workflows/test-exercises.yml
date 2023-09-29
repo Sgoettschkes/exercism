@@ -12,7 +12,7 @@ env:
   ghc-version: '8.10.7'
   lua-version: '5.4.3'
   lua-rocks-version: '3.8.0'
-  node-version: '17.3.0'
+  node-version: '18.18.0'
   stack-version: '2.7.3'
 
 jobs:
