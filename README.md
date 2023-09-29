@@ -33,18 +33,23 @@ For linting, you'll also need hlint: `stack install hlint`. hlint is installed t
 
 ## Javascript
 
-Add the [nodejs]https://github.com/asdf-vm/asdf-nodejs) plugin: `asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git`
+Add the [nodejs](https://github.com/asdf-vm/asdf-nodejs) plugin: `asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git`
 
 Run `asdf install` in the root folder.
 
 ## Lua
 
-Install lua and luarocks according to https://www.lua.org/download.html and https://github.com/luarocks/luarocks/wiki/Download. For macOS, use brew: `brew install lua luarocks`
+Add the [lua](https://github.com/Stratus3D/asdf-lua) plugin, install lua, and install busted for testing and luacheck for linting, using luarocks.
 
-Install busted for testing and luacheck for linting, using luarocks: `luarocks install busted && luarocks install luacheck`
+```shell
+asdf plugin-add lua https://github.com/Stratus3D/asdf-lua.git
+asdf install
+luarocks install busted && luarocks install luacheck
+asdf reshim lua
+```
 
 ## Rust
 
-Add the [rust](https://github.com/asdf-community/asdf-rust) plugin: `asdf plugin-add rust https://github.com/asdf-community/asdf-rust.git`
+Add the [rust](https://github.com/asdf-community/asdf-rust) plugin: `asdf plugin-add rust https://github.com/asdf-community/asdf-rust.git`.
 
 Run `asdf install` in the root folder.
