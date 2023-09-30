@@ -27,22 +27,21 @@ that belonged to]]
 }
 
 house.verse = function(which)
-  local verse = ""
-  for line = 1, which do
-    verse = lines[line] .. " " .. verse
+  local verse_table = {"This is"}
+  for line = which, 1, -1 do
+    table.insert(verse_table, lines[line])
   end
-  verse = "This is " .. verse
 
-  return verse:sub(1, -2)
+  return table.concat(verse_table, " ")
 end
 
 house.recite = function()
-  local verse = house.verse(1)
-  for line = 2, 12 do
-    verse = verse .. "\n" .. house.verse(line)
+  local verse_table = {}
+  for line = 1, 12 do
+    table.insert(verse_table, house.verse(line))
   end
 
-  return verse
+  return table.concat(verse_table, "\n")
 end
 
 return house
