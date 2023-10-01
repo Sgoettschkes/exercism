@@ -81,18 +81,18 @@ jobs:
             ^gleam/
             gleam-tests.sh
           since_last_remote_commit: 'true'
-      - name: "Setup Erlang"
-        uses: gleam-lang/setup-erlang@v1.0.0
-        if: steps.changed-files.outputs.any_changed == 'true'
+      - name: "Setup BEAM"
+        uses: erlef/setup-beam@v1
+        # if: steps.changed-files.outputs.any_changed == 'true'
         with:
           otp-version: ${{ env.erlang-version }}
       - name: "Setup Glam"
         uses: gleam-lang/setup-gleam@v1.0.1
-        if: steps.changed-files.outputs.any_changed == 'true'
+        # if: steps.changed-files.outputs.any_changed == 'true'
         with:
           gleam-version: ${{ env.gleam-version }}
       - name: "Run tests"
-        if: steps.changed-files.outputs.any_changed == 'true'
+        # if: steps.changed-files.outputs.any_changed == 'true'
         run: bash gleam-tests.sh
         shell: bash
   test-haskell:
