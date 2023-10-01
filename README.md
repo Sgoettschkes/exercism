@@ -29,9 +29,11 @@ Run `asdf install erlang && asdf install elixir` in the root folder.
 
 Add the [erlang](https://github.com/asdf-vm/asdf-erlang) plugin: `asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git`
 
+Add the [rebar](https://github.com/Stratus3D/asdf-rebar) plugin: `asdf plugin-add rebar https://github.com/Stratus3D/asdf-rebar.git`
+
 Add the [Gleam](https://github.com/asdf-community/asdf-gleam) plugin: `asdf plugin-add gleam https://github.com/asdf-community/asdf-gleam.git`
 
-Run `asdf install erlang && asdf install gleam`
+Run `asdf install erlang && asdf install rebar && asdf install gleam`
 
 ## Haskell
 

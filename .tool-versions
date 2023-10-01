@@ -4,5 +4,5 @@ elixir 1.15.6-otp-26
 gleam 0.31.0
 lua 5.4.6
 nodejs 18.18.0
+rebar 3.22.1
 rust 1.72.1
-
