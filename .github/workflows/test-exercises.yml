@@ -10,6 +10,7 @@ env:
   elixir-version: '1.15.6'
   erlang-version: '26.1'
   ghc-version: '8.10.7'
+  gleam-version: '0.31.0'
   lua-version: '5.4.6'
   lua-rocks-version: '3.9.2'
   node-version: '18.18.0'
@@ -64,6 +65,35 @@ jobs:
       - name: "Run tests"
         if: steps.changed-files.outputs.any_changed == 'true'
         run: bash elixir-tests.sh
+        shell: bash
+  test-gleam:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: "Checkout code"
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Get specific changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v2.0.0
+        with:
+          files: |
+            ^gleam/
+            gleam-tests.sh
+          since_last_remote_commit: 'true'
+      - name: "Setup Erlang"
+        uses: gleam-lang/setup-erlang@v1
+        if: steps.changed-files.outputs.any_changed == 'true'
+        with:
+          otp-version: ${{ env.erlang-version }}
+      - name: "Setup Glam"
+        uses: gleam-lang/setup-gleam@v1
+        if: steps.changed-files.outputs.any_changed == 'true'
+        with:
+          gleam-version: ${{ env.gleam-version }}
+      - name: "Run tests"
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: bash gleam-tests.sh
         shell: bash
   test-haskell:
     runs-on: ubuntu-20.04
