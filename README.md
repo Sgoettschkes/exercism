@@ -63,3 +63,10 @@ Run `asdf install nodejs` in the root folder.
 Add the [rust](https://github.com/asdf-community/asdf-rust) plugin: `asdf plugin-add rust https://github.com/asdf-community/asdf-rust.git`.
 
 Run `asdf install rust` in the root folder.
+
+## Zig
+
+Add the [zig](https://github.com/asdf-community/asdf-zig) plugin: `asdf plugin-add zig https://github.com/asdf-community/asdf-zig.git`.
+
+Run `asdf install zig` in the root folder.
+
