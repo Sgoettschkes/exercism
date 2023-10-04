@@ -37,9 +37,11 @@ Run `asdf install erlang && asdf install rebar && asdf install gleam`
 
 ## Haskell
 
-Install "The Haskell Tool Stack" according to https://docs.haskellstack.org/en/stable/install_and_upgrade/. For macOS, use brew:`brew install haskell-stack`
+Add the [Haskell](https://github.com/asdf-community/asdf-haskell) plugin: `asdf plugin-add haskell https://github.com/vic/asdf-haskell.git`
 
-For linting, you'll also need hlint: `stack install hlint`. hlint is installed to `~/.local/bin` and you'll need to put it into your path for the `haskell-tests.sh` script to work.
+Run `asdf install haskell` in the root folder.
+
+For linting, you'll also need hlint: `stack install hlint`. Don't forget to reshim: `asdf reshim haskell`
 
 ## Lua
 
