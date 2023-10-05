@@ -5,7 +5,7 @@ If you need help running the tests or submitting your code, check out `HELP.md`.
 
 ## Instructions
 
-An [Armstrong number](https://en.wikipedia.org/wiki/Narcissistic_number) is a number that is the sum of its own digits each raised to the power of the number of digits.
+An [Armstrong number][armstrong-number] is a number that is the sum of its own digits each raised to the power of the number of digits.
 
 For example:
 
@@ -16,6 +16,8 @@ For example:
 
 Write some code to determine whether a number is an Armstrong number.
 
+[armstrong-number]: https://en.wikipedia.org/wiki/Narcissistic_number
+
 ## Source
 
 ### Created by
@@ -25,6 +27,7 @@ Write some code to determine whether a number is an Armstrong number.
 ### Contributed to by
 
 - @amscotti
+- @kytrinyx
 
 ### Based on
 
