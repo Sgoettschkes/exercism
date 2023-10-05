@@ -15,6 +15,7 @@ env:
   lua-rocks-version: '3.9.2'
   node-version: '18.18.0'
   stack-version: '2.7.3'
+  zig-version: '0.11.0'
 
 jobs:
   test-dart:
@@ -207,4 +208,28 @@ jobs:
       - name: "Run tests"
         if: steps.changed-files.outputs.any_changed == 'true'
         run: bash rust-tests.sh
+        shell: bash
+  test-zig:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: "Checkout code"
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Get specific changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v2.0.0
+        with:
+          files: |
+            ^zig/
+            zig-tests.sh
+          since_last_remote_commit: 'true'
+      - name: "Setup zig"
+        uses: goto-bus-stop/setup-zig@v2
+        if: steps.changed-files.outputs.any_changed == 'true'
+        with:
+          version: ${{ env.zig-version }}
+      - name: "Run tests"
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: bash zig-tests.sh
         shell: bash
