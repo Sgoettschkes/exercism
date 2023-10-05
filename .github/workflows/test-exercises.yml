@@ -40,7 +40,7 @@ jobs:
           sdk: ${{ env.dart-version }}
       - name: "Run tests"
         if: steps.changed-files.outputs.any_changed == 'true'
-        run: bash javascript-tests.sh
+        run: bash dart-tests.sh
         shell: bash
   test-elixir:
     runs-on: ubuntu-20.04
