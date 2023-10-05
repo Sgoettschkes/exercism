@@ -6,7 +6,7 @@ on:
     branches: [develop,main]
 
 env:
-  dart-version: '2.15.1'
+  dart-version: '2.19.6'
   elixir-version: '1.15.6'
   erlang-version: '26.1'
   ghc-version: '8.10.7'
