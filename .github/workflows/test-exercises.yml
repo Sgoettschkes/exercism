@@ -112,15 +112,13 @@ jobs:
             haskell-tests.sh
           since_last_remote_commit: 'true'
       - name: "Caching"
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         if: steps.changed-files.outputs.any_changed == 'true'
         with:
           path: |
             ~/.stack
             haskell/*/.stack-work
-          key: ${{ runner.os }}-stack
-          restore-keys: |
-            ${{ runner.os }}-stack
+          key: ${{ runner.os }}-${{ env.ghc-version }}-${{ env.stack-version }}-stack
       - name: "Setup GHC"
         uses: haskell/actions/setup@v1
         if: steps.changed-files.outputs.any_changed == 'true'
