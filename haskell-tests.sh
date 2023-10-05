@@ -8,6 +8,6 @@ stack install hlint
 for dir in haskell/*/; do 
   cd $dir;
   hlint src/
-  stack test;
+  stack test
   cd $CUR_PATH;
 done
