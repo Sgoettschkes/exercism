@@ -5,17 +5,14 @@ pub type Error {
 pub fn steps(number: Int) -> Result(Int, Error) {
   case number {
     num if num < 1 -> Error(NonPositiveNumber)
-    num -> Ok(collatz(num))
+    num -> Ok(collatz(num, 0))
   }
 }
 
-fn collatz(number: Int) {
-  case number {
-    1 -> 0
-    num ->
-      case num % 2 {
-        0 -> 1 + collatz(num / 2)
-        1 -> 1 + collatz(3 * num + 1)
-      }
+fn collatz(number: Int, steps) {
+  case number, number % 2 {
+    1, _ -> steps
+    _, 0 -> collatz(number / 2, steps + 1)
+    _, 1 -> collatz(3 * number + 1, steps + 1)
   }
 }
