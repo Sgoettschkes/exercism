@@ -32,14 +32,17 @@ defmodule RationalNumbers do
   Absolute value of a rational number
   """
   @spec abs(a :: rational) :: rational
-  def abs({nom, denom}), do: {Kernel.abs(nom), Kernel.abs(denom)}
+  def abs({nom, denom}), do: reduce({Kernel.abs(nom), Kernel.abs(denom)})
 
   @doc """
   Exponentiation of a rational number by an integer
   """
   @spec pow_rational(a :: rational, n :: integer) :: rational
+  def pow_rational({nom, denom}, n) when n >= 0,
+    do: reduce({trunc(:math.pow(nom, n)), trunc(:math.pow(denom, n))})
+
   def pow_rational({nom, denom}, n),
-    do: {:math.pow(nom, Kernel.abs(n)), :math.pow(denom, Kernel.abs(n))}
+    do: pow_rational({denom, nom}, Kernel.abs(n))
 
   @doc """
   Exponentiation of a real number by a rational number
@@ -55,8 +58,8 @@ defmodule RationalNumbers do
   @spec reduce(a :: rational) :: rational
   def reduce({a, b}) when b < 0, do: reduce({a * -1, b * -1})
 
-  def reduce({a, b} = rational) do
-    gcd = gcd(RationalNumbers.abs(rational))
+  def reduce({a, b} = _rational) do
+    gcd = gcd({Kernel.abs(a), b})
     {trunc(a / gcd), trunc(b / gcd)}
   end
 
