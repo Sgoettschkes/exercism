@@ -99,7 +99,7 @@ jobs:
         run: bash gleam-tests.sh
         shell: bash
   test-haskell:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - name: "Checkout code"
         uses: actions/checkout@v2
@@ -206,7 +206,7 @@ jobs:
             rust-tests.sh
           since_last_remote_commit: 'true'
       - name: "Run tests"
-        # if: steps.changed-files.outputs.any_changed == 'true'
+        if: steps.changed-files.outputs.any_changed == 'true'
         run: bash rust-tests.sh
         shell: bash
   test-zig:
