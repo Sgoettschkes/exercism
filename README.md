@@ -60,6 +60,12 @@ Add the [nodejs](https://github.com/asdf-vm/asdf-nodejs) plugin: `asdf plugin ad
 
 Run `asdf install nodejs` in the root folder.
 
+## NodeJS (for Javascript)
+
+Add the [Pthon](https://github.com/asdf-community/asdf-python) plugin: `asdf plugin add pthon https://github.com/asdf-community/asdf-python`
+
+Run `asdf install python` in the root folder.
+
 ## Rust
 
 Add the [rust](https://github.com/asdf-community/asdf-rust) plugin: `asdf plugin-add rust https://github.com/asdf-community/asdf-rust.git`.
