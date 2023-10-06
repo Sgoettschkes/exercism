@@ -15,7 +15,7 @@ env:
   lua-rocks-version: '3.9.2'
   node-version: '18.18.0'
   rebar3-version: '3.22.1'
-  stack-version: '2.7.3'
+  stack-version: '2.13.1'
   zig-version: '0.11.0'
 
 jobs:
