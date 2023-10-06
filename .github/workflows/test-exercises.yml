@@ -20,7 +20,7 @@ env:
 
 jobs:
   test-dart:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - name: "Checkout code"
         uses: actions/checkout@v2
@@ -36,11 +36,11 @@ jobs:
           since_last_remote_commit: 'true'
       - name: "Setup Dart"
         uses: dart-lang/setup-dart@v1
-        if: steps.changed-files.outputs.any_changed == 'true'
+        # if: steps.changed-files.outputs.any_changed == 'true'
         with:
           sdk: ${{ env.dart-version }}
       - name: "Run tests"
-        if: steps.changed-files.outputs.any_changed == 'true'
+        # if: steps.changed-files.outputs.any_changed == 'true'
         run: bash dart-tests.sh
         shell: bash
   test-elixir:
@@ -85,17 +85,17 @@ jobs:
           since_last_remote_commit: 'true'
       - name: "Setup BEAM"
         uses: erlef/setup-beam@v1
-        # if: steps.changed-files.outputs.any_changed == 'true'
+        if: steps.changed-files.outputs.any_changed == 'true'
         with:
           otp-version: ${{ env.erlang-version }}
           rebar3-version: ${{ env.rebar3-version }}
       - name: "Setup Glam"
         uses: gleam-lang/setup-gleam@v1.0.1
-        # if: steps.changed-files.outputs.any_changed == 'true'
+        if: steps.changed-files.outputs.any_changed == 'true'
         with:
           gleam-version: ${{ env.gleam-version }}
       - name: "Run tests"
-        # if: steps.changed-files.outputs.any_changed == 'true'
+        if: steps.changed-files.outputs.any_changed == 'true'
         run: bash gleam-tests.sh
         shell: bash
   test-haskell:
