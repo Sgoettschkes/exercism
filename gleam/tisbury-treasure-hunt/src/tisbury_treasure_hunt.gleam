@@ -31,27 +31,14 @@ pub fn special_case_swap_possible(
   place: #(String, #(String, Int)),
   desired_treasure: #(String, #(Int, String)),
 ) -> Bool {
-  case found_treasure, place, desired_treasure {
-    #("Brass Spyglass", _found_location), #(
-      "Abandoned Lighthouse",
-      _place_location,
-    ), _desired -> True
-    #("Amethyst Octopus", _found_location), #(
-      "Stormy Breakwater",
-      _place_location,
-    ), #("Crystal Crab", _desired_location) -> True
-    #("Amethyst Octopus", _found_location), #(
-      "Stormy Breakwater",
-      _place_location,
-    ), #("Glass Starfish", _desired_location) -> True
-    #("Vintage Pirate Hat", _found_location), #(
-      "Harbor Managers Office",
-      _place_location,
-    ), #("Model Ship in Large Bottle", _desired_location) -> True
-    #("Vintage Pirate Hat", _found_location), #(
-      "Harbor Managers Office",
-      _place_location,
-    ), #("Antique Glass Fishnet Float", _desired_location) -> True
+  case found_treasure.0, place.0, desired_treasure.0 {
+    "Brass Spyglass", "Abandoned Lighthouse", _desired -> True
+    "Amethyst Octopus", "Stormy Breakwater", "Crystal Crab" -> True
+    "Amethyst Octopus", "Stormy Breakwater", "Glass Starfish" -> True
+    "Vintage Pirate Hat", "Harbor Managers Office", "Model Ship in Large Bottle" ->
+      True
+    "Vintage Pirate Hat", "Harbor Managers Office", "Antique Glass Fishnet Float" ->
+      True
     _else, _else, _else -> False
   }
 }
