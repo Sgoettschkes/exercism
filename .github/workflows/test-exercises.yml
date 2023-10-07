@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: "Checkout code"
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Get specific changed files
@@ -48,12 +48,12 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: "Checkout code"
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Get specific changed files
         id: changed-files
-        uses: tj-actions/changed-files@v2.0.0
+        uses: tj-actions/changed-files@v39
         with:
           files: |
             ^elixir/
@@ -73,12 +73,12 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: "Checkout code"
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Get specific changed files
         id: changed-files
-        uses: tj-actions/changed-files@v2.0.0
+        uses: tj-actions/changed-files@v39
         with:
           files: |
             ^gleam/
@@ -103,12 +103,12 @@ jobs:
   #   runs-on: ubuntu-22.04
   #   steps:
   #     - name: "Checkout code"
-  #       uses: actions/checkout@v2
+  #       uses: actions/checkout@v4
   #       with:
   #         fetch-depth: 0
   #     - name: Get specific changed files
   #       id: changed-files
-  #       uses: tj-actions/changed-files@v2.0.0
+  #       uses: tj-actions/changed-files@v39
   #       with:
   #         files: |
   #           ^haskell/
@@ -137,19 +137,19 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: "Checkout code"
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Get specific changed files
         id: changed-files
-        uses: tj-actions/changed-files@v2.0.0
+        uses: tj-actions/changed-files@v39
         with:
           files: |
             ^javascript/
             javascript-tests.sh
           since_last_remote_commit: 'true'
       - name: "Setup Node"
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         if: steps.changed-files.outputs.any_changed == 'true'
         with:
           node-version: ${{ env.node-version }}
@@ -161,12 +161,12 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: "Checkout code"
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Get specific changed files
         id: changed-files
-        uses: tj-actions/changed-files@v2.0.0
+        uses: tj-actions/changed-files@v39
         with:
           files: |
             ^lua/
@@ -195,12 +195,12 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: "Checkout code"
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Get specific changed files
         id: changed-files
-        uses: tj-actions/changed-files@v2.0.0
+        uses: tj-actions/changed-files@v39
         with:
           files: |
             ^python/
@@ -222,12 +222,12 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: "Checkout code"
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Get specific changed files
         id: changed-files
-        uses: tj-actions/changed-files@v2.0.0
+        uses: tj-actions/changed-files@v39
         with:
           files: |
             ^rust/
@@ -241,12 +241,12 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: "Checkout code"
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Get specific changed files
         id: changed-files
-        uses: tj-actions/changed-files@v2.0.0
+        uses: tj-actions/changed-files@v39
         with:
           files: |
             ^zig/
