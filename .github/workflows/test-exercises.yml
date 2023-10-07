@@ -32,7 +32,7 @@ jobs:
         uses: tj-actions/changed-files@v39
         with:
           files: |
-            ^dart/
+            dart/**
             dart-tests.sh
       - name: "Setup Dart"
         uses: dart-lang/setup-dart@v1
@@ -55,7 +55,7 @@ jobs:
         uses: tj-actions/changed-files@v39
         with:
           files: |
-            ^elixir/
+            elixir/**
             elixir-tests.sh
       - name: "Setup BEAM"
         uses: erlef/setup-beam@v1
@@ -79,7 +79,7 @@ jobs:
         uses: tj-actions/changed-files@v39
         with:
           files: |
-            ^gleam/
+            gleam/**
             gleam-tests.sh
       - name: "Setup BEAM"
         uses: erlef/setup-beam@v1
@@ -108,7 +108,7 @@ jobs:
   #       uses: tj-actions/changed-files@v39
   #       with:
   #         files: |
-  #           ^haskell/
+  #           haskell/**
   #           haskell-tests.sh
   #     - name: "Caching"
   #       uses: actions/cache@v3
@@ -141,7 +141,7 @@ jobs:
         uses: tj-actions/changed-files@v39
         with:
           files: |
-            ^javascript/
+            javascript/**
             javascript-tests.sh
       - name: "Setup Node"
         uses: actions/setup-node@v3
@@ -164,7 +164,7 @@ jobs:
         uses: tj-actions/changed-files@v39
         with:
           files: |
-            ^lua/
+            lua/**
             lua-tests.sh
       - name: "Setup Lua"
         uses: leafo/gh-actions-lua@v8.0.0
@@ -223,7 +223,7 @@ jobs:
         uses: tj-actions/changed-files@v39
         with:
           files: |
-            ^rust/
+            rust/**
             rust-tests.sh
       - name: "Run tests"
         if: steps.changed-files.outputs.any_changed == 'true'
@@ -241,7 +241,7 @@ jobs:
         uses: tj-actions/changed-files@v39
         with:
           files: |
-            ^zig/
+            zig/**
             zig-tests.sh
       - name: "Setup zig"
         uses: goto-bus-stop/setup-zig@v2
