@@ -197,7 +197,7 @@ jobs:
         uses: tj-actions/changed-files@v39
         with:
           files: |
-            ^python/
+            python/**
             python-tests.sh
       - name: "Setup Python"
         uses: actions/setup-python@v4

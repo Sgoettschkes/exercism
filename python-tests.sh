@@ -1,7 +1,6 @@
 #!/bin/bash
 set -e
 
-
 CUR_PATH=`pwd`
 
 for dir in python/*/; do 
