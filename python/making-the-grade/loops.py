@@ -29,7 +29,8 @@ def count_failed_students(student_scores):
 
 
 def above_threshold(student_scores, threshold):
-    """Determine how many of the provided student scores were 'the best' based on the provided threshold.
+    """Determine how many of the provided student scores were 'the best' 
+    based on the provided threshold.
 
     :param student_scores: list - of integer scores.
     :param threshold: int - threshold to cross to be the "best" score.
@@ -59,7 +60,7 @@ def letter_grades(highest):
     l_grades = []
     for num in range(41, highest, round((highest - 40) / 4)):
         l_grades.append(num)
-    
+
     return l_grades
 
 
@@ -78,7 +79,8 @@ def student_ranking(student_scores, student_names):
 
 
 def perfect_score(student_info):
-    """Create a list that contains the name and grade of the first student to make a perfect score on the exam.
+    """Create a list that contains the name and grade of the first student to
+    make a perfect score on the exam.
 
     :param student_info: list - of [<student name>, <score>] lists.
     :return: list - first `[<student name>, 100]` or `[]` if no student score of 100 is found.
