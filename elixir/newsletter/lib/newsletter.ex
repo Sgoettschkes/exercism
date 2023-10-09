@@ -2,8 +2,7 @@ defmodule Newsletter do
   def read_emails(path) do
     path
     |> File.read!()
-    |> String.split("\n")
-    |> Enum.filter(fn line -> line != "" end)
+    |> String.split()
   end
 
   def open_log(path) do
