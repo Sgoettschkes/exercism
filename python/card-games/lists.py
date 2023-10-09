@@ -64,7 +64,7 @@ def average_even_is_average_odd(hand):
             evens.append(card)
         else:
             odds.append(card)
-    
+
     return card_average(evens) == card_average(odds)
 
 

@@ -27,7 +27,7 @@ def preparation_time_in_minutes(number_of_layers):
     :param number_of_layers: int - the number of layers of the lasagne.
     :return: int - the time it takes to prepare the lasagne.
 
-    Function that takes the number of layers the lasagne should have and returns the preparation time for the whole dish.
+    Function that takes the number of layers the lasagne should have and returns the preparation time for the whole dish
     """
     return number_of_layers * 2
 
@@ -38,6 +38,7 @@ def elapsed_time_in_minutes(number_of_layers, elapsed_bake_time):
     :param elapsed_bake_time: int - the time already spend in the ofen
     :return: int - the time since you started preparing the dish
 
-    Function that takes the number of layers the lasagne should have and the time the lasagne is in the oven and returns the time elapsed since you started cooking.
+    Function that takes the number of layers the lasagne should have and the time the lasagne is in 
+    the oven and returns the time elapsed since you started cooking.
     """
     return preparation_time_in_minutes(number_of_layers) + elapsed_bake_time

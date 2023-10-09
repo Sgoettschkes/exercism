@@ -60,11 +60,13 @@ Add the [nodejs](https://github.com/asdf-vm/asdf-nodejs) plugin: `asdf plugin ad
 
 Run `asdf install nodejs` in the root folder.
 
-## NodeJS (for Javascript)
+## Python
 
 Add the [Pthon](https://github.com/asdf-community/asdf-python) plugin: `asdf plugin add pthon https://github.com/asdf-community/asdf-python`
 
 Run `asdf install python` in the root folder.
+
+Install pytest and pylint: `pip install pylint pytest`
 
 ## Rust
 

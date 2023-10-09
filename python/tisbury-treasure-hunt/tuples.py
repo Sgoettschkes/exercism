@@ -55,5 +55,5 @@ def clean_up(combined_record_group):
     records = ""
     for record in combined_record_group:
         records += f"('{record[0]}', '{record[2]}', ('{record[3][0]}', '{record[3][1]}'), '{record[4]}')\n"
-    
+
     return records
