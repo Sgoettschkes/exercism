@@ -96,39 +96,39 @@ jobs:
         if: steps.changed-files.outputs.any_changed == 'true'
         run: bash gleam-tests.sh
         shell: bash
-  # test-haskell:
-  #   runs-on: ubuntu-22.04
-  #   steps:
-  #     - name: "Checkout code"
-  #       uses: actions/checkout@v4
-  #       with:
-  #         fetch-depth: 0
-  #     - name: Get specific changed files
-  #       id: changed-files
-  #       uses: tj-actions/changed-files@v39
-  #       with:
-  #         files: |
-  #           haskell/**
-  #           haskell-tests.sh
-  #     - name: "Caching"
-  #       uses: actions/cache@v3
-  #       # if: steps.changed-files.outputs.any_changed == 'true'
-  #       with:
-  #         path: |
-  #           ~/.stack
-  #           haskell/*/.stack-work
-  #         key: ${{ runner.os }}-${{ env.ghc-version }}-${{ env.stack-version }}-stack
-  #     - name: "Setup GHC"
-  #       uses: haskell-actions/setup@v2
-  #       # if: steps.changed-files.outputs.any_changed == 'true'
-  #       with:
-  #         ghc-version: ${{ env.ghc-version }}
-  #         enable-stack: true
-  #         stack-version: ${{ env.stack-version }}
-  #     - name: "Run tests"
-  #       # if: steps.changed-files.outputs.any_changed == 'true'
-  #       run: bash haskell-tests.sh
-  #       shell: bash
+  test-haskell:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: "Checkout code"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Get specific changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v39
+        with:
+          files: |
+            haskell/**
+            haskell-tests.sh
+      - name: "Caching"
+        uses: actions/cache@v3
+        # if: steps.changed-files.outputs.any_changed == 'true'
+        with:
+          path: |
+            ~/.stack
+            haskell/*/.stack-work
+          key: ${{ runner.os }}-${{ env.ghc-version }}-${{ env.stack-version }}-stack
+      - name: "Setup GHC"
+        uses: haskell-actions/setup@v2
+        # if: steps.changed-files.outputs.any_changed == 'true'
+        with:
+          ghc-version: ${{ env.ghc-version }}
+          enable-stack: true
+          stack-version: ${{ env.stack-version }}
+      - name: "Run tests"
+        # if: steps.changed-files.outputs.any_changed == 'true'
+        run: bash haskell-tests.sh
+        shell: bash
   test-javascript:
     runs-on: ubuntu-22.04
     steps:
