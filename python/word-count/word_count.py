@@ -1,7 +1,10 @@
+"""Counts occurences of words"""
+
 import re
 
 def count_words(sentence):
-    res = dict()
+    """Counts occurences of words"""
+    res = {}
     pattern = r"[0-9]+|[a-zA-Z]+(?:'[a-zA-Z]+)?"
     for word in re.findall(pattern, sentence):
         word = word.lower()
