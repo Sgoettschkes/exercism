@@ -110,26 +110,26 @@ jobs:
           files: |
             haskell/**
             haskell-tests.sh
-      # - name: "Caching"
-      #   uses: actions/cache@v3
-      #   # if: steps.changed-files.outputs.any_changed == 'true'
-      #   with:
-      #     path: |
-      #       ~/.stack
-      #       haskell/*/.stack-work
-      #     key: ${{ runner.os }}-${{ env.ghc-version }}-${{ env.stack-version }}-stack
+      - name: "Caching"
+        uses: actions/cache@v3
+        if: steps.changed-files.outputs.any_changed == 'true'
+        with:
+          path: |
+            ~/.stack
+            haskell/*/.stack-work
+          key: ${{ runner.os }}-${{ env.ghc-version }}-${{ env.stack-version }}-stack
       - name: "Setup GHC"
         uses: haskell-actions/setup@v2
-        # if: steps.changed-files.outputs.any_changed == 'true'
+        if: steps.changed-files.outputs.any_changed == 'true'
         with:
           ghc-version: ${{ env.ghc-version }}
           enable-stack: true
           stack-version: ${{ env.stack-version }}
       - name: "Install hlint"
-        # if: steps.changed-files.outputs.any_changed == 'true'
+        if: steps.changed-files.outputs.any_changed == 'true'
         run: stack install hlint
       - name: "Run tests"
-        # if: steps.changed-files.outputs.any_changed == 'true'
+        if: steps.changed-files.outputs.any_changed == 'true'
         run: bash haskell-tests.sh
         shell: bash
   test-javascript:
