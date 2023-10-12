@@ -7,7 +7,7 @@ isValid n
   | length reversedNumStr < 2 = False
   | otherwise = luhnCalc reversedNumStr `mod` 10 == 0
   where
-    reversedNumStr = reverse $ filter (`elem` ['0'..'9']) n
+    reversedNumStr = reverse $ filter(`elem` ['0'..'9']) n
 
 luhnCalc :: String -> Int
 luhnCalc [] = 0
