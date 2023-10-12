@@ -4,12 +4,12 @@
 import Data.Foldable     (for_)
 import Data.Function     (on)
 import Test.Hspec        (Spec, describe, it, shouldBe)
-import Test.Hspec.Runner (configFastFail, defaultConfig, hspecWith)
+import Test.Hspec.Runner (configFailFast, defaultConfig, hspecWith)
 
 import SpaceAge (Planet(..), ageOn)
 
 main :: IO ()
-main = hspecWith defaultConfig {configFastFail = True} specs
+main = hspecWith defaultConfig {configFailFast = True} specs
 
 specs :: Spec
 specs = describe "ageOn" $ for_ cases test
@@ -75,5 +75,3 @@ cases = [ Case { description = "Earth"
                , expected    = 0.35
                }
         ]
-
--- 33c40fce28c835600282d0bfdc589d7c6d785f6e
