@@ -4,12 +4,12 @@
 import Data.Foldable     (for_)
 import Data.String       (fromString)
 import Test.Hspec        (Spec, describe, it, shouldBe)
-import Test.Hspec.Runner (configFastFail, defaultConfig, hspecWith)
+import Test.Hspec.Runner (configFailFast, defaultConfig, hspecWith)
 
 import Pangram (isPangram)
 
 main :: IO ()
-main = hspecWith defaultConfig {configFastFail = True} specs
+main = hspecWith defaultConfig {configFailFast = True} specs
 
 specs :: Spec
 specs = describe "isPangram" $ for_ cases test
@@ -79,5 +79,3 @@ cases = [ Case { description = "with empty sentence"
                }
         -- -}
         ]
-
--- 73e37723b154f0c741d227c43af09d23dc7e5e44
