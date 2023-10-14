@@ -12,4 +12,4 @@ extractWords :: String -> [String]
 extractWords = map stripWord . words . map toLowerCaseOrSpace
     where 
         stripWord = dropWhile (not.isAlphaNum) . dropWhileEnd (not.isAlphaNum)
-        toLowerCaseOrSpace x = if (isAlphaNum x) || x == '\'' then toLower x else ' '
+        toLowerCaseOrSpace x = if isAlphaNum x || x == '\'' then toLower x else ' '
