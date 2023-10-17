@@ -9,8 +9,7 @@ defmodule Acronym do
     |> String.replace("-", " ")
     |> String.replace(~r/[^a-zA-Z0-9\s]/, "")
     |> String.split(" ")
-    |> Enum.map(fn word -> String.slice(word, 0..0) end)
-    |> Enum.join()
+    |> Enum.map_join(&String.first/1)
     |> String.upcase()
   end
 end
