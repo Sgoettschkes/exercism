@@ -18,37 +18,20 @@ defmodule AllYourBase do
       {:error, "all digits must be >= 0 and < input base"}
     else
       base_10 =
-        digits
-        |> Enum.with_index()
-        |> Enum.map(fn {value, index} ->
-          value * :math.pow(input_base, length(digits) - index - 1)
-        end)
-        |> Enum.map(&Kernel.trunc/1)
-        |> Enum.sum()
+        Enum.reduce(digits, 0, fn digit, acc -> acc * input_base + digit end)
 
-      {:ok,
-       convert_to_base(
-         base_10,
-         output_base,
-         biggest_multiplicator(base_10, output_base, 1),
-         []
-       )}
+      result =
+        base_10
+        |> convert_to_base(output_base)
+        |> Enum.reverse()
+
+      {:ok, if(result != [], do: result, else: [0])}
     end
   end
 
-  defp convert_to_base(_rest, _base, 0, result), do: result
+  defp convert_to_base(0, _base), do: []
 
-  defp convert_to_base(rest, base, current_power, result) do
-    cur = Kernel.trunc(rest / current_power)
-    rest = rest - cur * current_power
-    convert_to_base(rest, base, Kernel.trunc(current_power / base), result ++ [cur])
-  end
-
-  defp biggest_multiplicator(number, base, tmp) do
-    if number < base * tmp do
-      tmp
-    else
-      biggest_multiplicator(number, base, base * tmp)
-    end
+  defp convert_to_base(rest, base) do
+    [rem(rest, base) | convert_to_base(div(rest, base), base)]
   end
 end
