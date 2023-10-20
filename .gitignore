@@ -1,3 +1,6 @@
+# Clojjure
+/clojure/*/.cpcache
+
 # Dart
 /dart/*/.dart_tool
 /dart/*/.packages
