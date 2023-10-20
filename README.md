@@ -11,6 +11,16 @@ In order to solve exercism exercises, test the code and run the linter used for 
 
 We'll be using [asdf](https://asdf-vm.com/) if not indicated otherwise.
 
+## Clojure
+
+Install rlwrap and java runtime:
+
+`brew install java rlwrap`
+
+Add the [clojure](https://github.com/asdf-community/asdf-clojure) plugin: `asdf plugin add clojure https://github.com/asdf-community/asdf-clojure.git`
+
+Run `asdf install clojure` in the root folder.
+
 ## Dart
 
 Add the [dart](https://github.com/PatOConnor43/asdf-dart) plugin: `asdf plugin-add dart https://github.com/patoconnor43/asdf-dart.git`
