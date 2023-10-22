@@ -6,6 +6,7 @@ on:
     branches: [develop,main]
 
 env:
+  clojure-version: '1.10.3.1093'
   dart-version: '2.19.6'
   elixir-version: '1.15.6'
   erlang-version: '26.1'
@@ -20,6 +21,35 @@ env:
   zig-version: '0.11.0'
 
 jobs:
+  test-clojure:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: "Checkout code"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Get specific changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v39
+        with:
+          files: |
+            clojure/**
+            dart-clojure.sh
+      - name: "Prepare java"
+        uses: actions/setup-java@v3
+        if: steps.changed-files.outputs.any_changed == 'true'
+        with:
+          distribution: 'zulu'
+          java-version: '21'
+      - name: "Setup Clojure"
+        uses: DeLaGuardo/setup-clojure@12.1
+        if: steps.changed-files.outputs.any_changed == 'true'
+        with:
+          cli: ${{ env.clojure-version }}
+      - name: "Run tests"
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: bash clojure-tests.sh
+        shell: bash
   test-dart:
     runs-on: ubuntu-22.04
     steps:
