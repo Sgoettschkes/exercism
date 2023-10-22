@@ -48,7 +48,7 @@ jobs:
           cli: ${{ env.clojure-version }}
       - name: "Install rlwrap"
         # if: steps.changed-files.outputs.any_changed == 'true'
-        run: apt-get -y install rlwrap
+        run: sudo apt-get -y install rlwrap
         shell: bash
       - name: "Run tests"
         # if: steps.changed-files.outputs.any_changed == 'true'
