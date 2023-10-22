@@ -37,21 +37,21 @@ jobs:
             dart-clojure.sh
       - name: "Prepare java"
         uses: actions/setup-java@v3
-        # if: steps.changed-files.outputs.any_changed == 'true'
+        if: steps.changed-files.outputs.any_changed == 'true'
         with:
           distribution: 'zulu'
           java-version: '21'
       - name: "Setup Clojure"
         uses: DeLaGuardo/setup-clojure@12.1
-        # if: steps.changed-files.outputs.any_changed == 'true'
+        if: steps.changed-files.outputs.any_changed == 'true'
         with:
           cli: ${{ env.clojure-version }}
       - name: "Install rlwrap"
-        # if: steps.changed-files.outputs.any_changed == 'true'
+        if: steps.changed-files.outputs.any_changed == 'true'
         run: sudo apt-get -y install rlwrap
         shell: bash
       - name: "Run tests"
-        # if: steps.changed-files.outputs.any_changed == 'true'
+        if: steps.changed-files.outputs.any_changed == 'true'
         run: bash clojure-tests.sh
         shell: bash
   test-dart:
