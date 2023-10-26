@@ -21,6 +21,12 @@ Add the [clojure](https://github.com/asdf-community/asdf-clojure) plugin: `asdf 
 
 Run `asdf install clojure` in the root folder.
 
+## C++
+
+Add the [cmake](https://github.com/asdf-community/asdf-cmake) plugin: `asdf plugin add cmake https://github.com/asdf-community/asdf-cmake.git`
+
+Run `asdf install cmake` in the root folder.
+
 ## Dart
 
 Add the [dart](https://github.com/PatOConnor43/asdf-dart) plugin: `asdf plugin-add dart https://github.com/patoconnor43/asdf-dart.git`

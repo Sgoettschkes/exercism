@@ -1,5 +1,8 @@
-# Clojjure
+# Clojure
 /clojure/*/.cpcache
+
+# C++
+/cpp/*/build
 
 # Dart
 /dart/*/.dart_tool

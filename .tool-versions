@@ -1,3 +1,4 @@
+cmake 3.27.7
 clojure 1.10.3.1093
 dart 2.19.6
 erlang 26.1
