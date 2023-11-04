@@ -1,9 +1,7 @@
 name: Test exercises
 on:
   push:
-    branches: [develop,main]
-  pull_request:
-    branches: [develop,main]
+    branches: [main]
 
 env:
   clojure-version: '1.10.3.1093'
