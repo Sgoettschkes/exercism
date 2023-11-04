@@ -50,23 +50,7 @@ bool valid_player_combination(AccountStatus first, AccountStatus second) {
 // `AccountStatus` arguments and returns `true`, if and only if the first
 // account has a strictly higher priority than the second.
 bool has_priority(AccountStatus first, AccountStatus second) {
-  switch (first) {
-    case AccountStatus::mod:
-      return second != AccountStatus::mod;
-      break;
-     case AccountStatus::user:
-      return second != AccountStatus::mod && second != AccountStatus::user;
-      break;
-    case AccountStatus::guest:
-      return second == AccountStatus::troll;
-      break;
-    case AccountStatus::troll:
-      return false;
-      break;
-    default:
-      return false;
-      break;
-  }
+  return first > second;
 }
 
 
