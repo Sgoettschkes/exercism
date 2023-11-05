@@ -1,5 +1,4 @@
 defmodule Scrabble do
-
   @score %{
     "b" => 3,
     "c" => 3,
