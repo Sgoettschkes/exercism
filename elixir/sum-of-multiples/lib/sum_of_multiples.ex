@@ -7,7 +7,7 @@ defmodule SumOfMultiples do
     factors
     |> Enum.map(fn
       0 -> 0
-      factor -> Enum.to_list(factor..limit-1//factor)
+      factor -> Enum.to_list(factor..(limit - 1)//factor)
     end)
     |> List.flatten()
     |> Enum.uniq()
