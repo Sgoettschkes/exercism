@@ -6,20 +6,21 @@ class RnaTranscription {
   }
 
   String transcribe(String d) {
+    String res = '';
     switch (d) {
       case 'G':
-        return 'C';
+        res = 'C';
         break;
       case 'C': 
-        return 'G';
+        res = 'G';
         break;
       case 'T': 
-        return 'A';
+        res = 'A';
         break;
       case 'A': 
-        return 'U';
+        res = 'U';
         break;
     }
-    return '';
+    return res;
   }
 }
