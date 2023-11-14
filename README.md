@@ -35,11 +35,17 @@ Run `asdf install dart` in the root folder.
 
 ## Elixir
 
-Add the [erlang](https://github.com/asdf-vm/asdf-erlang) plugin: `asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git`
+Install [Erlang](#Erlang).
 
 Add the [elixir](https://github.com/asdf-vm/asdf-elixir) plugin: `asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git`
 
-Run `asdf install erlang && asdf install elixir` in the root folder.
+Run `asdf install elixir` in the root folder.
+
+## Erlang
+
+Add the [erlang](https://github.com/asdf-vm/asdf-erlang) plugin: `asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git`
+
+Run `asdf install erlang` in the root folder.
 
 ## Gleam
 

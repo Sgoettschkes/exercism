@@ -16,6 +16,9 @@
 /elixir/*/_build
 /elixir/*/deps
 
+# Erlang
+/erlang/*/_build
+
 # Haskell
 /haskell/*/.stack-work
 
