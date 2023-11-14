@@ -7,6 +7,6 @@ for dir in javascript/*/; do
   cd $dir;
   npm install
   npm run lint
-  npm run test
+  npm test
   cd $CUR_PATH;
 done
