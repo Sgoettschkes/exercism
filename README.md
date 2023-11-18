@@ -65,6 +65,14 @@ Run `asdf install haskell` in the root folder.
 
 For linting, you'll also need hlint: `stack install hlint`. Don't forget to reshim: `asdf reshim haskell`
 
+# jq
+
+Add the [jq](https://github.com/lsanwick/asdf-jq) plugin: `asdf plugin-add jq https://github.com/lsanwick/asdf-jq.git`
+
+For testing, the track uses bats. Add the [bats](https://github.com/timgluz/asdf-bats) plugin: `asdf plugin-add bats https://github.com/timgluz/asdf-bats.git`.
+
+Run `asdf install bats jq` in the root folder.
+
 ## Lua
 
 Add the [lua](https://github.com/Stratus3D/asdf-lua) plugin, install lua, and install busted for testing and luacheck for linting, using luarocks.
