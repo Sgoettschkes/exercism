@@ -17,19 +17,19 @@ Install rlwrap and java runtime:
 
 `brew install java rlwrap`
 
-Add the [clojure](https://github.com/asdf-community/asdf-clojure) plugin: `asdf plugin add clojure https://github.com/asdf-community/asdf-clojure.git`
+Add the [clojure](https://github.com/asdf-community/asdf-clojure) plugin: `asdf plugin add clojure https://github.com/asdf-community/asdf-clojure.git`.
 
 Run `asdf install clojure` in the root folder.
 
 ## C++
 
-Add the [cmake](https://github.com/asdf-community/asdf-cmake) plugin: `asdf plugin add cmake https://github.com/asdf-community/asdf-cmake.git`
+Add the [cmake](https://github.com/asdf-community/asdf-cmake) plugin: `asdf plugin add cmake https://github.com/asdf-community/asdf-cmake.git`.
 
 Run `asdf install cmake` in the root folder.
 
 ## Dart
 
-Add the [dart](https://github.com/PatOConnor43/asdf-dart) plugin: `asdf plugin-add dart https://github.com/patoconnor43/asdf-dart.git`
+Add the [dart](https://github.com/PatOConnor43/asdf-dart) plugin: `asdf plugin-add dart https://github.com/patoconnor43/asdf-dart.git`.
 
 Run `asdf install dart` in the root folder.
 
@@ -37,41 +37,41 @@ Run `asdf install dart` in the root folder.
 
 Install [Erlang](#Erlang).
 
-Add the [elixir](https://github.com/asdf-vm/asdf-elixir) plugin: `asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git`
+Add the [elixir](https://github.com/asdf-vm/asdf-elixir) plugin: `asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git`.
 
 Run `asdf install elixir` in the root folder.
 
 ## Erlang
 
-Add the [erlang](https://github.com/asdf-vm/asdf-erlang) plugin: `asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git`
+Add the [erlang](https://github.com/asdf-vm/asdf-erlang) plugin: `asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git`.
 
 Run `asdf install erlang` in the root folder.
 
 ## Gleam
 
-Add the [erlang](https://github.com/asdf-vm/asdf-erlang) plugin: `asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git`
+Add the [erlang](https://github.com/asdf-vm/asdf-erlang) plugin: `asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git`.
 
-Add the [rebar](https://github.com/Stratus3D/asdf-rebar) plugin: `asdf plugin-add rebar https://github.com/Stratus3D/asdf-rebar.git`
+Add the [rebar](https://github.com/Stratus3D/asdf-rebar) plugin: `asdf plugin-add rebar https://github.com/Stratus3D/asdf-rebar.git`.
 
-Add the [Gleam](https://github.com/asdf-community/asdf-gleam) plugin: `asdf plugin-add gleam https://github.com/asdf-community/asdf-gleam.git`
+Add the [Gleam](https://github.com/asdf-community/asdf-gleam) plugin: `asdf plugin-add gleam https://github.com/asdf-community/asdf-gleam.git`.
 
-Run `asdf install erlang && asdf install rebar && asdf install gleam`
+Run `asdf install erlang && asdf install rebar && asdf install gleam` in the root folder.
 
 ## Haskell
 
-Add the [Haskell](https://github.com/asdf-community/asdf-haskell) plugin: `asdf plugin-add haskell https://github.com/vic/asdf-haskell.git`
+Add the [Haskell](https://github.com/asdf-community/asdf-haskell) plugin: `asdf plugin-add haskell https://github.com/vic/asdf-haskell.git`.
 
 Run `asdf install haskell` in the root folder.
 
-For linting, you'll also need hlint: `stack install hlint`. Don't forget to reshim: `asdf reshim haskell`
+For linting, you'll also need hlint: `stack install hlint`. Don't forget to reshim: `asdf reshim haskell`.
 
 # jq
 
-Add the [jq](https://github.com/lsanwick/asdf-jq) plugin: `asdf plugin-add jq https://github.com/lsanwick/asdf-jq.git`
+Add the [jq](https://github.com/lsanwick/asdf-jq) plugin: `asdf plugin-add jq https://github.com/lsanwick/asdf-jq.git`.
 
 For testing, the track uses bats. Add the [bats](https://github.com/timgluz/asdf-bats) plugin: `asdf plugin-add bats https://github.com/timgluz/asdf-bats.git`.
 
-Run `asdf install bats jq` in the root folder.
+Run `asdf install jq && asdf install bats` in the root folder.
 
 ## Lua
 
@@ -86,13 +86,13 @@ asdf reshim lua
 
 ## NodeJS (for Javascript)
 
-Add the [nodejs](https://github.com/asdf-vm/asdf-nodejs) plugin: `asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git`
+Add the [nodejs](https://github.com/asdf-vm/asdf-nodejs) plugin: `asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git`.
 
 Run `asdf install nodejs` in the root folder.
 
 ## Python
 
-Add the [Pthon](https://github.com/asdf-community/asdf-python) plugin: `asdf plugin add pthon https://github.com/asdf-community/asdf-python`
+Add the [Pthon](https://github.com/asdf-community/asdf-python) plugin: `asdf plugin add pthon https://github.com/asdf-community/asdf-python`.
 
 Run `asdf install python` in the root folder.
 
