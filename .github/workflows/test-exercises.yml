@@ -228,17 +228,17 @@ jobs:
             jq/**
             jq-tests.sh
       - name: "Setup jq"
-        uses: dcarbone/install-jq-action@v2
-        if: steps.changed-files.outputs.any_changed == 'true'
+        uses: dcarbone/install-jq-action@v2.1.0
+        # if: steps.changed-files.outputs.any_changed == 'true'
         with:
           version: '${{ env.jq-version }}'
       - name: "Setup bats"
         uses: mig4/setup-bats@v1
-        if: steps.changed-files.outputs.any_changed == 'true'
+        # if: steps.changed-files.outputs.any_changed == 'true'
         with:
           bats-version: '${{ env.bats-version }}'
       - name: "Run tests"
-        if: steps.changed-files.outputs.any_changed == 'true'
+        # if: steps.changed-files.outputs.any_changed == 'true'
         run: bash jq-tests.sh
         shell: bash
   test-lua:
