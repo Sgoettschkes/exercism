@@ -232,6 +232,7 @@ jobs:
         if: steps.changed-files.outputs.any_changed == 'true'
         with:
           version: '${{ env.jq-version }}'
+          force: true
       - name: "Setup bats"
         uses: mig4/setup-bats@v1
         if: steps.changed-files.outputs.any_changed == 'true'
