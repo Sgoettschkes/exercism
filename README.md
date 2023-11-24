@@ -98,6 +98,12 @@ Run `asdf install python` in the root folder.
 
 Install pytest and pylint: `pip install pylint pytest`
 
+## Ruby
+
+Add the [ruby](https://github.com/asdf-vm/asdf-ruby) plugin: `asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git`.
+
+Run `asdf install ruby` in the root folder. You also need the `minitest` gem: `gem install minitest`.
+
 ## Rust
 
 Add the [rust](https://github.com/asdf-community/asdf-rust) plugin: `asdf plugin-add rust https://github.com/asdf-community/asdf-rust.git`.
