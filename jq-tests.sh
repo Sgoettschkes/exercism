@@ -1,7 +1,6 @@
 #!/bin/bash
 set -e
 
-export MIX_ENV=test
 CUR_PATH=`pwd`
 
 for dir in jq/*/; do 
