@@ -6,6 +6,7 @@ defmodule StringSeries do
   """
   @spec slices(s :: String.t(), size :: integer) :: list(String.t())
   def slices(_s, size) when size < 1, do: []
+
   def slices(s, size) do
     if String.length(s) < size do
       []
