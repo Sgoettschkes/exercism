@@ -110,6 +110,12 @@ Add the [rust](https://github.com/asdf-community/asdf-rust) plugin: `asdf plugin
 
 Run `asdf install rust` in the root folder.
 
+## NodeJS (for WASM)
+
+Add the [nodejs](https://github.com/asdf-vm/asdf-nodejs) plugin: `asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git`.
+
+Run `asdf install nodejs` in the root folder.
+
 ## Zig
 
 Add the [zig](https://github.com/asdf-community/asdf-zig) plugin: `asdf plugin-add zig https://github.com/asdf-community/asdf-zig.git`.
