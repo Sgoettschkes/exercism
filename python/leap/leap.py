@@ -1,2 +1,5 @@
+"""Function to calculate leap year."""
+
 def leap_year(year):
-    return True if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0) else False
+    """Function to calculate leap year."""
+    return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
