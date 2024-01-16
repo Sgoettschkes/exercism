@@ -31,3 +31,6 @@
 
 # VScode
 /.vscode/
+
+# Wasm
+/wasm/*/node_modules
