@@ -32,9 +32,7 @@ pub fn pair(full_name1: String, full_name2: String) {
  **         ** **         **
 **            *            **
 **                         **
-**     " <> initials(
-    full_name1,
-  ) <> "  +  " <> initials(full_name2) <> "     **
+**     " <> initials(full_name1) <> "  +  " <> initials(full_name2) <> "     **
  **                       **
    **                   **
      **               **

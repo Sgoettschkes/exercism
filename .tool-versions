@@ -4,7 +4,7 @@ clojure 1.10.3.1093
 dart 2.19.6
 erlang 26.1
 elixir 1.15.6-otp-26
-gleam 0.31.0
+gleam 0.34.0
 haskell 8.10.7
 jq 1.7
 lua 5.4.6

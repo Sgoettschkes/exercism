@@ -10,7 +10,8 @@ pub fn treasure_location_matches_place_location(
   place_location: #(String, Int),
   treasure_location: #(Int, String),
 ) -> Bool {
-  place_location.0 == treasure_location.1 && place_location.1 == treasure_location.0
+  place_location.0 == treasure_location.1
+  && place_location.1 == treasure_location.0
 }
 
 pub fn count_place_treasures(
@@ -21,7 +22,8 @@ pub fn count_place_treasures(
   treasures
   |> list.filter(fn(treasure) {
     let #(_treasure_name, treasure_location) = treasure
-    treasure_location.0 == place_location.1 && treasure_location.1 == place_location.0
+    treasure_location.0 == place_location.1
+    && treasure_location.1 == place_location.0
   })
   |> list.length()
 }
